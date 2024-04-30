@@ -2,19 +2,27 @@ package wk;
 
 import javax.swing.JFrame;
 inpoer javax.swing.JButton;
-
+import javax.swing.
 
 public class Class430 extends JFrame{
-  public Class430(){
+	public Class430(){
 		Class430 win = new Class430();
 		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//EXIT_ON_CLOSE = int
 		setVisible(true);
-    Jbutton b1 = new JButton("YES");
-    setVisable(true);
-  }
+		Jbutton b1 = new JButton("YES");
+		Jbutton b2 = new JButton("NO");
+		JTextField text = new JTextField(10);
+		setLayout ( new FlowLayout());
+
+		add(text);
+		add(b1);
+		add(b2);
+
+    		setVisable(true);
+	}
 	public static void main(String[] args) {
-	  Class430 win = new Class430;
+		Class430 win = new Class430;
     
 	}
 	
