@@ -1,0 +1,109 @@
+package lab0430;
+
+
+
+import java.awt.FlowLayout;
+
+import javax.swing.*; //필요한 것 다 가져다 쓸게
+
+public class MyWindow extends JFrame {
+
+	public MyWindow() { //생성자.
+
+		setSize(500, 300); //윈도우의 크기 설정
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		JButton b1 = new JButton("Yes");
+
+		JButton b2 = new JButton("No");
+
+		JTextField text = new JTextField(10);
+
+		setLayout( new FlowLayout());
+
+		add(text);
+
+		add(b1);
+
+		add(b2);
+
+		setVisible(true);
+
+	}
+
+	public static void main(String[] args) {
+
+		MyWindow win = new MyWindow();
+
+	}
+
+}
+
+
+
+
+
+
+===================
+
+Thread 상속
+
+package lab0430;
+
+class Number extends Thread{
+
+	String name;
+
+	int num;
+
+	void print() {
+
+		while(num<=10) {
+
+			System.out.print(name + (num++) + " ");
+
+		}
+
+		System.out.println();
+
+	}
+
+	@Override
+
+	public void run() {
+
+		print(); //쓰레드로 동작하게 됨.
+
+	}
+
+}
+
+public class ThreadEx {
+
+	public static void main(String[] args) {
+
+		Number n1 = new Number();
+
+		n1.name = "a";
+
+		Number n2 = new Number();
+
+		n2.name = "b";
+
+		n1.print(); //일반 호출
+
+		n2.print();
+
+		n1.num = 0;
+
+		n2.num = 0;
+
+		n1.start();
+
+		n2.start();
+
+	}
+
+}
+
