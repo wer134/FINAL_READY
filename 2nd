@@ -1,0 +1,47 @@
+package lab0430;
+
+// 객체를 만들지 않고 바로 호출할 수 있는 함수는 어떻게 만들까?
+
+
+
+class MyMath{
+
+	double p1 = 3.14;
+
+	static double p2 = 3.14;
+
+}
+
+public class StaticEx {
+
+	public static void main(String[] args) {
+
+		System.out.println(MyMath.p2);
+
+		MyMath m = new MyMath();
+
+		m.p1++;
+
+		m.p2++;
+
+		MyMath m2 = new MyMath();
+
+		m2.p1++;
+
+		m2.p2++;
+
+		System.out.println(m2.p1);
+
+		System.out.println(m2.p2);
+
+		System.out.println(Math.PI);
+
+		System.out.println(Math.random());
+
+		System.out.println(Math.abs(-6));
+
+		System.out.println(Math.max(-6,10));
+
+	}
+
+}
